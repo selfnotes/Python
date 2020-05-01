@@ -1,0 +1,30 @@
+Step by Step GitHub
+1- You have to install Git
+	learning@learning:~$ sudo apt-get install git
+2-Create an account on github.com and login with your a/c
+3-Set GIT userid and email to your system.
+	learning@learning:~$ git config --global user.name "Your Userid"
+	learning@learning:~$ git config --global user.email "Your Email"
+4- Now go to your GitHub account and create repository for public, I have created with the name "myworkspace"
+5-create and directory on your local machine for git with same same as GitHub directory 
+	learning@learning:~$ mkdir myworkspace
+6- now follow below commands for complete the installation with demo file
+
+*Goto new local workspace 
+	learning@learning:~$ cd myworkspace/
+*create README.md file
+	learning@learning:~/Gitworkspace$ echo "# Workingspace" >> README.md
+*initialise the git
+	learning@learning:~/Gitworkspace$ git init
+*file add to git
+	learning@learning:~/Gitworkspace$ git add README.md
+*commit the file and save the changes
+	learning@learning:~/Gitworkspace$ git commit -m "first commit"
+*Add the file to the remote location
+	learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
+
+
+
+
+
+
