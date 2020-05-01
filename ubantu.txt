@@ -24,6 +24,18 @@ Step by Step GitHub
 	learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
 7-Check the status of files
 	learning@learning:~/Gitworkspace$ git status
+8-Again add txt file to the index
+	learning@learning:~/Gitworkspace$ git add ubantu.txt	
+	learning@learning:~/Gitworkspace$ git status
+9-commit the file
+	learning@learning:~/Gitworkspace$ git commit -m "changes commit"
+[master abefe1f] changes commit
+ 1 file changed, 56 insertions(+)
+ create mode 100644 ubantu.txt
+10-added all file in onego
+
+
+
 
 -------------------------------------------------------
 ------------Add new file-------------------------------

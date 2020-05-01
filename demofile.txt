@@ -22,6 +22,32 @@ Step by Step GitHub
 	learning@learning:~/Gitworkspace$ git commit -m "first commit"
 *Add the file to the remote location
 	learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
+7-Check the status of files
+	learning@learning:~/Gitworkspace$ git status
+
+-------------------------------------------------------
+------------Add new file-------------------------------
+learning@learning:~/Gitworkspace$ git add ubantu
+learning@learning:~/Gitworkspace$ git commit ubantu -m "git installation on ubantu"
+[master 9a0c61a] git installation on ubantu
+ 1 file changed, 30 insertions(+)
+ create mode 100644 ubantu
+learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
+fatal: remote origin already exists.
+learning@learning:~/Gitworkspace$ git push -u origin master
+Username for 'https://github.com': selfnotes
+Password for 'https://selfnotes@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 817 bytes | 408.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/selfnotes/Workingspace.git
+   1edf131..9a0c61a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+
 
 
 
