@@ -33,6 +33,12 @@ Step by Step GitHub
  1 file changed, 56 insertions(+)
  create mode 100644 ubantu.txt
 10-added all file in onego
+learning@learning:~/Gitworkspace$ git checkout master
+M	firstbranch.txt
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
 
 
 
