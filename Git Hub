@@ -1,0 +1,191 @@
+Step by Step GitHub
+1- You have to install Git
+learning@learning:~$ sudo apt-get install git
+
+2-Create an account on github.com and login with your a/c
+
+3-Set GIT userid and email to your system.
+learning@learning:~$ git config --global user.name "Your Userid"
+learning@learning:~$ git config --global user.email "Your Email"
+
+4- Now go to your GitHub account and create repository for public, I have created with the name "myworkspace"
+
+5-create and directory on your local machine for git with same same as GitHub directory 
+learning@learning:~$ mkdir myworkspace
+
+6- now follow below commands for complete the installation with demo file
+*Goto new local workspace 
+learning@learning:~$ cd myworkspace/
+*create README.md file
+learning@learning:~/Gitworkspace$ echo "# Workingspace" >> README.md
+*initialise the git
+learning@learning:~/Gitworkspace$ git init
+*file add to git
+learning@learning:~/Gitworkspace$ git add README.md
+*commit the file and save the changes
+learning@learning:~/Gitworkspace$ git commit -m "first commit"
+*Add the file to the remote location
+learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
+
+working commands of Git
+two types version control system- 
+1-centralized version control
+2-Distributed version control
+Git is Distributed version control system
+
+3-to check version of git
+learning@learning:~$ git --version
+
+4-start the git
+learning@learning:~/Gitworkspace$ git init
+
+5-check status
+learning@learning:~/Gitworkspace$ git status
+
+6-add the repository
+learning@learning:~/Gitworkspace$ git add filename
+
+7-commit git
+learning@learning:~/Gitworkspace$ git commit -m "comment"
+
+8- again we can check the status
+learning@learning:~/Gitworkspace$ git status
+
+9- To add multiple file to git repository
+learning@learning:~/Gitworkspace$ git add -A
+or 
+learning@learning:~/Gitworkspace$ git add .
+
+10- commit all files
+learning@learning:~/Gitworkspace$ git commit -a -m "add comment"
+
+11- add the remote origin (from local to GitHub)
+learning@learning:~/Gitworkspace$ git remote add origin  https://github.com/selfnotes/Workingspace.git
+
+12- Now push the changes to the remote repository
+learning@learning:~/Gitworkspace$ git push -u origin master
+
+13-To see the log of git
+learning@learning:~/Gitworkspace$ git log
+
+14-For help
+learning@learning:~/Gitworkspace$ git --help
+
+-------------------Branching and merging----------------------------
+1-create branch
+learning@learning:~/Gitworkspace$ git branch pythonbranch
+
+2-to switch the new branch
+learning@learning:~/Gitworkspace$ git checkout pythonbranch
+
+3-add txt file to the new branch
+learning@learning:~/Gitworkspace$ touch test2.txt
+or copy the file
+
+4-learning@learning:~/Gitworkspace$ git status
+
+5-learning@learning:~/Gitworkspace$ git add test2.txt
+
+6-learning@learning:~/Gitworkspace$ git commit -m "test2.txt"
+
+7-learning@learning:~/Gitworkspace$ git status
+now file commited
+8-learning@learning:~/Gitworkspace$ git push -u origin pythonbranch
+now branch should be visible in remote repository
+
+9-learning@learning:~/Gitworkspace$ git checkout master
+switch to master but test2 file can't see in master
+
+10-learning@learning:~/Gitworkspace$ git merge pythonbranch
+note- first switch to master after we have to merge the new branch
+now we can see the test2.txt in master
+
+11-learning@learning:~/Gitworkspace$ git push -u origin master
+now you can see the file in master on remote repository
+
+12-TO delete branch from git (local repository)
+learning@learning:~/Gitworkspace$ git branch -d pythonbranch
+TO delete branch from git (remote repository)
+learning@learning:~/Gitworkspace$ git push origin --delete pythonbranch
+
+ 13-Email notification from the git using setting option 
+ 
+ 14-Create TAGs in 5 step
+ checkout the branch in which you wants to create TAGs
+ leaing@learning:~/Gitworkspace$ git checkout master
+ 
+ create tag with the specific name
+ learning@learning:~/Gitworkspace$ git tag v1.0
+ OR (anotative)
+ learning@learning:~/Gitworkspace$ git tag -a v1.1 -m "tag for relese version 1.1"
+ 
+ check tag
+ learning@learning:~/Gitworkspace$ git tag
+ OR
+ learning@learning:~/Gitworkspace$ git show v1.1
+ OR
+ learning@learning:~/Gitworkspace$ git tag -l "v1.*"
+ 
+ Push tag to remote
+ learning@learning:~/Gitworkspace$ git push origin v1.0
+ OR to push all tags
+ learning@learning:~/Gitworkspace$ git push --tags
+ 
+ Delete the tags
+ learning@learning:~/Gitworkspace$ git tag -d v1.0
+ OR
+ learning@learning:~/Gitworkspace$ git tag --delete v1.0
+ 
+ To deleting tags from remote
+ learning@learning:~/Gitworkspace$ git push origin -d v1.0
+ learning@learning:~/Gitworkspace$ git push origin --delete v1.0
+
+15-Merge and Rebase -(with new folder)
+learning@learning:~/Gitworkspace$ git init
+learning@learning:~/Gitworkspace$ git status
+learning@learning:~/Gitworkspace$ touch x1.txt
+learning@learning:~/Gitworkspace$ git status
+learning@learning:~/Gitworkspace$ git add x1.txt
+learning@learning:~/Gitworkspace$ git status
+learning@learning:~/Gitworkspace$ git commit -m "first commit"
+learning@learning:~/Gitworkspace$ git branch new
+learning@learning:~/Gitworkspace$ git checkout new
+learning@learning:~/Gitworkspace$ touch x2.txt
+learning@learning:~/Gitworkspace$ git add x2.*
+learning@learning:~/Gitworkspace$ git commit -m "first commit for new branch x2.txt"
+learning@learning:~/Gitworkspace$ git checkout master
+learning@learning:~/Gitworkspace$ touch x3.txt
+learning@learning:~/Gitworkspace$ git add .
+learning@learning:~/Gitworkspace$ git commit -m "commited x3"
+learning@learning:~/Gitworkspace$ git checkout new
+learning@learning:~/Gitworkspace$ git merge master
+16-Rebase
+learning@learning:~/Gitworkspace$ git rebase master
+----------------------------------------------------------------------------------------------
+learning@learning:~/Gitworkspace$ git add ubantu
+learning@learning:~/Gitworkspace$ git commit ubantu -m "git installation on ubantu"
+[master 9a0c61a] git installation on ubantu
+ 1 file changed, 30 insertions(+)
+ create mode 100644 ubantu
+learning@learning:~/Gitworkspace$ git remote add origin https://github.com/selfnotes/Workingspace.git
+fatal: remote origin already exists.
+learning@learning:~/Gitworkspace$ git push -u origin master
+Username for 'https://github.com': selfnotes
+Password for 'https://selfnotes@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 817 bytes | 408.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/selfnotes/Workingspace.git
+   1edf131..9a0c61a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+
+
+
+
+
+
+

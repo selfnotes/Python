@@ -1,0 +1,1565 @@
+-----------------Python Practice-------------------------------------
+#PIP is package manager
+#python 3 developed in 2008
+print("Hello mates!")#print with new line in default so we use end keyword like below
+print("Hello mates!",end=" ")#will provide space 
+print("how are you")# print after space
+
+#With 2 strings not end with newline
+print("line one","line two")
+#Below are the scape characters
+print("harry is \n good boy \t \' \" \ 11111")
+
+#CWHV7 variables 
+var1="hello mates" #string
+var2=4    #integer
+var3=36.4 #Float
+var4="gaurav"
+var5="55"
+var6="50"
+print(type(var1))
+print(type(var2))
+print(type(var3))
+#print(v1+v2) # not possible diff variable types
+print(var3+var2)
+print(var1+var4)
+print(var5+var6) #will add the string
+
+#To convert the type we have below functions
+#str()
+#int()
+#float()
+
+print(10* "hello\n") # print 10 times
+print(100*int(var5)+int(var6))
+print(10 * str(int(var5)+int(var6)))#print 10 times
+
+#user input
+print("enter the number")
+inputnumber=input()
+print("you have entered ",inputnumber)
+print("you have entered ",inputnumber*10)#print 10 times
+
+#addition of 2 numbers
+print("enter first number")
+n1=input()
+print("enter second number")
+n2=input()
+print("sum of these two numbers is",int(n1)+int(n2))
+
+mystr="my name is kumar"  #index starting from 0 in python
+print(mystr)
+print(mystr[5])      #slicing print 5th alphabet
+print(mystr[0:5])    #my na
+print(len(mystr))    #string length 16
+print(mystr[0:17])	#complete string
+print(mystr[0:90])   #will also give complete string
+print(mystr[0:10:2]) #scap with 2  print result m aei
+print(mystr[::])     #will give complete string
+print(mystr[::2])    #will scape with single charactere
+print(mystr[::222])  # will give maximum resolved string index 0 will print compulsury
+print(mystr[-4:])    #umar-from -4 to last element
+print(mystr[-4:-2])  #um- will count from end and fetch till the next count 
+print(mystr[::-1])   #reverse string ramuk si eman ym
+print(mystr[::-2])   #reverse string with peding 2
+print(mystr.isalnum()) #checks alpha numeric
+print(mystr.isalpha()) #checks the alpha
+print(mystr.endswith("kumar")) #ends with kumar -TRUE
+print(mystr.count("k"))  #count the alphabate in string
+print(mystr.capitalize()) #truned into capital
+print(mystr.find("a"))  #gives the position of the alpha/string which comes first
+print(mystr.replace("is","are")) #replace the string
+
+grocery=["harpic","vim bar","deodrant","bhindi","Lollypop",56] #mixed list
+print(grocery)
+print(grocery[4])
+
+numbers=[2,7,11,3]
+print(numbers)
+print(numbers[3])
+numbers.sort()     # this will change the original list
+numbers.reverse()  # this will change the original list
+
+print(numbers[0:5])	#slicing
+print(numbers[0:5:2]) #peding with one
+print(numbers[::-1])  #reverse the list
+print(max(numbers))
+print(min(numbers))
+
+numbers.append(7)       #Element add in last
+numbers.append(72)	  #Element add in last
+print(numbers)
+
+numbers1=[]		   #create empty list
+numbers1.append(7)       #will add single element
+numbers1.append(72)	   #add
+print(numbers1)
+numbers1.insert(1,33)   #Add and shift from index 1
+print(numbers1)		  
+numbers1.pop()          #eleminate the last element
+print(numbers1)
+numbers1[1]=66          #change the number on given index
+print(numbers1)
+
+#Tuple
+#Mutable  - can change
+#Immutable- cannot change
+#list is mutable and tuple is immutable
+tp=(1,2,3)
+print(tp)
+#tp[1]=8 it gives error becoz tuple is immutable
+tp1=(1)      #this is not tuple we have to add one comma in single element tuple
+print(tp1)
+tp1=(1,)
+print(tp1)
+
+#Swap two number
+a=1
+b=8
+print(a," and ",b)
+a,b=b,a
+print(a," and ",b)
+
+Dictionary is key value pairs data structure 
+d1={}           #blank dic
+d2={"harry":"burger","rohan":"fish","skillf":"Roti","shubham":{"B":"maggie","L":"roti","D":"chicken"}} #dict under dict
+print(d2["harry"])
+print(d2["shubham"])   #key is immutable value can be
+d2["Ankit"]="Junk Food"
+d2["420"]="Kebabs" #add into dict
+del d2["420"]   #can delete the item or key-value pair
+print(d2)
+
+#Dictonary's functions
+d3=d2
+print(d3)
+del d3["harry"]
+print(d3)
+print(d2)      #d3 pointing to d2 so we have to use only copy function
+d2.update({"Leena":"Toffee"})
+print(d2.get("rohan"))
+print(d2)
+print(d2.keys())
+print(d2.items())
+
+#Note: To creating set you have to add the set keyword in prefix otherwise turns in tuple. 
+s=set()
+#set using list
+s_from_list=set([1,2,3,4])
+print(s_from_list)
+print(type(s_from_list))
+
+#other way to create set
+l=[9,8,7,6]
+s=set(l)
+print(s)
+s.add(5)
+s.add(10)
+#s.remove(5) #set is immutable
+print(s)
+s1=s.union({5,2})   #it is creating new set
+print(s1)
+s1=s.intersection({5,2})
+print(s1)##
+
+
+
+#if-elif-else
+var1=6
+var2=56
+print("enter the number for comparission")
+var3=int(input())
+
+if var3>var2:
+    print("Greater")t
+elif var3==var2:
+    print("Equal")
+else:
+    print("Lesser")
+
+list1=[5,7,3]
+print(5 in list1)
+
+if 15 not in list1:
+    print("No its not in the list")
+
+#loops
+list1=["harry","larry","carry","marie","tarry","charry"]
+for item in list1:
+    print(item)
+
+list2=[["harry",1],["larry",2],["carry",6],["marie",250]]
+for item,lollypop in tuple2:
+    print(item)
+    print(item,"and lollypops are ",lollypop)
+
+#creating dictonary from list
+dict1=dict(list2)
+print(list2)
+
+#break and continue
+i=0
+while(True):
+    if i+1 <5:
+        i=i+1
+        continue
+    print(i,end=" ")
+    if(i==44):
+       break #stop the loop
+    i=i+1
+
+#new program
+while(True):
+    inp=int(input("\n enter a number"))
+    if inp>100:
+        print("you have entered more then 100")
+        break
+    else:
+	print("try again")
+        continue
+
+#operators in python#
+#1-Arithmatic  + - * /  // **
+#Assignment = += /= -= 
+#comparison == != > < >= <=
+#Logical  AND, OR, NOT    
+#Identity is is not
+#Membership  in, not in
+#Bitwise  
+
+# Function
+def function1(a,b):
+    print("Hello you are in function1",a+b)
+
+function1(5,7)
+
+def function2(a,b):
+    average=(a+b)/2
+    return  average
+
+v=function2(5,7)
+print(v)
+
+def function2(a,b):
+    """This is the function for average"""  #using Doc string in functions
+    average=(a+b)/2
+    return  average
+
+v=function2(5,7)
+print(v)
+print(function2.__doc__)  #doc string
+
+#try catch accept
+print("enter no one ")
+num1=input()
+print("enter no two ")
+num2=input()
+try:
+    print("the sum of these two numbers is ",int(num1)+int(num2))
+except Exception as e:
+    print(e)
+
+print("this line is very important")
+
+
+#File I/O
+Harry is a good boy
+Harry is the king of this universe
+Harry is very smart
+"""
+"r" - Open file for reading-Default mode
+"w" - Open file for writing
+"x" - Create file if not exists
+"a" - Append the file
+"t" - Text mode--Default mode
+"b" - Binary mode
+"+" - Read and write both
+"""
+#File Reading
+f=open("Harry.txt","rt")
+content=f.read()
+print(content)
+f.close()
+
+f=open("Harry.txt","rt")
+content=f.read(3)  #read first 3 cx=haracter
+print(content)
+
+content=f.read(3)  #read second 3 character
+print(content)
+f.close()
+
+#File Writing
+f=open("Harry.txt","w")
+f.write("Harry bhai kya haal hai")
+f.close()
+
+#File append 
+f=open("Harry.txt","a")
+a=f.write("\nThis is append so added in last file")
+print(a)
+f.close()
+
+#File read and write both
+f=open("Harry.txt","r+")
+print(f.read())
+f.write("Thankyou")
+
+#More on Files-seek() tell() 
+f=open(“harry.txt”)
+f.seek(11)
+print(f.tell())
+print(f.readline())
+print(f.tell())
+
+Print(f.readline())
+Print(f.tell())
+f.close()
+
+#Global & Local variable
+l=10    #global
+def function1(n):
+    l=5  #local variable
+    m=8  #local variable
+    print(n,"I have printed")
+    print(l)
+function1("this is me")
+print(l)
+def harry():
+    x=20
+    def rohan():
+        global x
+        x=88
+    print("before calling rohan()",x)
+    rohan()
+    print("after calling rohan()", x)
+harry()
+print(x)
+
+# recursion
+def factorial_rec(n):
+    """
+	Doc string regarding the recursion function
+    :param n: integer
+    :return: n * n-1 * n-2 . . . . .
+    """
+    if n==1:
+        return 1
+    else:
+        return n * factorial_rec(n-1)
+number=int(input("enter the number"))
+print("factorial using recurssive Method", factorial_rec(number))
+
+#Lambda function or anonymos function
+minus= lambda x,y:x-y   #one liner function
+#OR
+def minus(x,y):
+    return x-y
+print(minus(9,4))
+
+#below is simple function program using list
+def a_first(a):
+    return a[1]
+a=[[1,14],[5,6],[8,23]]
+
+#a.sort(key=a_first)
+print(a)
+#now above function by using lambda
+a.sort(key=lambda x:x[1])
+print(a)
+
+
+#Using module
+import random
+random_number=random.randint(0,5)
+print(random_number)
+rand=random.random()  #Generation 0 to 1
+rand=random.random() *100 #genrate 0 to 100 number
+print(rand)
+
+lst=["starplus","DD1","Zee","AAjtak"]
+choice1=random.choice(lst)
+print(choice1)
+
+#F string---string formatting
+import math
+me="Harry"
+#can use the below but bad practice
+a="this is %s"%me 
+print(a)  
+# Or We could use the 
+a1=3
+a="this is {1}{0}"+"this is {0}{1}"
+b=a.format(me,a1)
+print(b)
+#Now use the best practice by F string
+a2 = f"this is {me} {a1}{math.cos(60)}"  #just write f first
+print(a2)
+
+#args
+def funtion_name(a,b,c,d):
+    print(a,b,c,d)
+#For multiple parameter passing below is not the right approch
+funtion_name("harry","barry","tarry","kally")  
+
+#Right approach using args
+#args using for list parameter and kwargs using for key value pairs.
+normal="I am normal”
+def funargs(normal,*args,**kwargs):  #right approch#args and kwargs are optional
+    print(normal)
+    for item in args:
+        print(item)
+    for key,value in kwargs.items():
+        print(key,value)
+
+
+# this will  always treted as tuple
+har=["harry","barry","tarry","kally","shivam","kali"]  
+kw={"rohan":"programmer"}
+funargs(normal,*har,**kw) #right #normal argument should be first in function
+
+#time module.
+#Explain the execution of a program 
+import time
+initial=time.time()
+k=0
+while(k<45):
+    print("this is harry--")
+    k+=1
+print("time while ",time.time()-initial,"second")
+initial2=time.time()
+for i in range(45):
+    print("this is harry")
+print("time for ", time.time() - initial2, "second")
+local_time=time.asctime(time.localtime(time.time()))
+print(local_time)
+
+#virtual environment just run below command on terminal
+$ pip install virtualenv
+$ virtualenv har
+$ cd /har/script/activate
+$ cd deactivate
+
+#Enumeration – first look on simple way-(#if we want even or odd no of items)
+
+l1=["Bhindi","gajar","aloo","chopsticks"] 
+i=1
+for item in l1:
+    if i%2 is not 0:
+        print(f"jarvis please buy{item}")
+    i+=1
+
+
+# With the help of Enumeration
+for index, item in enumerate(l1):#index starts from 0
+    if index%2==0:
+        print(f"jarvis please buy{item}")
+
+#Module-
+import sklearn as sk
+print(sk.__version__)
+import sys
+print(sys.path)  # it tells the path where the module will search
+from sklearn.ensemble import RandomForestClassifier
+print(RandomForestClassifier())
+
+
+#importing other files
+#File2_45
+a=7
+def printjoke(str):
+    print(f"this function is a joke {str}")
+
+import File2_45
+File2_45.a      #this is right way to import other files
+print(File2_45.a)
+File2_45.printjoke("this is me") #this function will call from other file
+
+#name=__Main__
+#File46
+def printhar(string):
+    return f"Hi mates this is me with {string}"
+def add(num1,num2):
+    return num1+num2+5
+print("and the name is ",__name__)
+if __name__ == '__main__':
+    print(printhar("a glass of wine"))
+    o=add(4,6)
+    print(o)
+
+import File46
+print(File46.add(4,4))
+
+#Join Function
+lis=["john","randy","Aurten","orton","khali","jinder"]
+for item in lis:
+    print(item," and ",end=" ")
+print("other WWE stars")
+#same work we can do by using join function
+a=" and ".join(lis)
+a=",".join(lis)
+print(a,"other WWE stars")
+
+#MAP, Filter, Reduce Using Lambda
+#--------------------------MAP------------------------------
+# numbers = ["3", "34", "64"]
+# numbers = list(map(int, numbers))
+# for i in range(len(numbers)):
+#     numbers[i] = int(numbers[i])
+# numbers[2] = numbers[2] + 1
+# print(numbers[2])
+# def sq(a):
+#     return a*a
+
+#num = [2,3,5,6,76,3,3,2]# square = list(map(sq, num))
+#print(square)
+num = [2,3,5,6,76,3,3,2]
+square = list(map(lambda x: x*x, num))
+print(square)
+
+def cube(a):
+     return a*a*a
+
+func = [square, cube]
+for i in range(5):
+     val = list(map(lambda x:x(i), func))
+     print(val)
+
+#Filter
+ list_1 = [1,2,3,4,5,6,7,8,9]
+ def is_greater_5(num):
+     return num>5
+ gr_than_5 = list(filter(is_greater_5, list_1))
+ print(gr_than_5)
+
+#--------------------------REDUCE------------------------------
+from functools import reduce
+list1 = [1,2,3,4,2]
+num = reduce(lambda x,y:x*y, list1)
+
+# num = 0
+# for i in list1:
+#     num = num + i
+print(num)
+
+
+#Decorator
+def function1():
+     print("Subscribe now")
+ func2 = function1
+ del function1
+ func2()
+
+def funcret(num):
+     if num==0:
+         return print
+     if num==1:
+         return sum
+
+ a = funcret(1)
+ print(a)
+
+# def executor(func):
+#     func("this")
+#
+#
+# executor(print)
+
+def dec1(func1):
+    def nowexec():
+        print("Executing now")
+        func1()
+        print("Executed")
+    return nowexec
+
+@dec1
+def who_is_harry():
+    print("Harry is a good boy")
+
+who_is_harry = dec1(who_is_harry)
+who_is_harry()
+
+  #############################OPPS###############################################
+# Classes - Template
+# Object - Instance Of the Class
+
+#abstract class
+class Student:
+    pass
+
+harry = Student()
+larry = Student()
+
+harry.name = "Harry"
+harry.std = 12
+harry.section = 1
+larry.std = 9
+larry.subjects = ["hindi", "physics"]
+print(harry.section, larry.subjects)
+#Program for class example
+class Employee:
+    no_of_leaves = 8
+    pass
+
+harry = Employee()	
+rohan = Employee()
+
+harry.name = "Harry"
+harry.salary = 455
+harry.role = "Instructor"
+
+rohan.name = "Rohan"
+rohan.salary =4554
+rohan.role = "Student"
+
+print(Employee.no_of_leaves)
+print(Employee.__dict__)
+Employee.no_of_leaves = 9
+print(Employee.__dict__)
+print(Employee.no_of_leaves)
+
+
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+
+harry = Employee("Harry", 255, "Instructor")
+
+class method    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"dede
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        # params = string.split("-")
+        # print(params)
+        # return cls(params[0], params[1], params[2])
+        return cls(*string.split("-"))
+
+
+harry = Employee("Harry", 255, "Instructor")
+rohan = Employee("Rohan", 455, "Student")
+karan = Employee.from_dash("Karan-480-Student")
+
+print(karan.no_of_leaves)
+# rohan.change_leaves(34)
+# print(harry.no_of_leaves)
+
+58—static method
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        return cls(*string.split("-"))
+
+    @staticmethod
+    def printgood(string):
+        print("This is good " + string)
+
+harry = Employee("Harry", 255, "Instructor")
+rohan = Employee("Rohan", 455, "Student")
+karan = Employee.from_dash("Karan-480-Student")
+
+Employee.printgood("Rohan")
+
+59--Encaptulation
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        return cls(*string.split("-"))
+
+    @staticmethod
+    def printgood(string):
+        print("This is good " + string)
+
+harry = Employee("Harry", 255, "Instructor")
+rohan = Employee("Rohan", 455, "Student")
+karan = Employee.from_dash("Karan-480-Student")
+
+Employee.printgood("Rohan")
+
+#Inheritance
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        return cls(*string.split("-"))
+
+    @staticmethod
+    def printgood(string):
+        print("This is good " + string)
+
+
+class Programmer(Employee):
+    no_of_holiday = 56
+    def __init__(self, aname, asalary, arole, languages):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+        self.languages = languages
+
+
+    def printprog(self):
+        return f"The Programmer's Name is {self.name}. Salary is {self.salary} and role is {self.role}.The languages are {self.languages}"
+
+
+
+harry = Employee("Harry", 255, "Instructor")
+rohan = Employee("Rohan", 455, "Student")
+
+shubham = Programmer("Shubham", 555, "Programmer", ["python"])
+karan = Programmer("Karan", 777, "Programmer", ["python", "Cpp"])
+print(karan.no_of_holiday)
+
+
+# Public - variable
+# Protected -__variable
+# Private - __variable__
+
+class Employee:
+    no_of_leaves = 8
+    var = 8
+    _protec = 9
+    __pr = 98
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    @classmethod
+    def from_dash(cls, string):
+        return cls(*string.split("-"))
+
+    @staticmethod
+    def printgood(string):
+        print("This is good " + string)
+
+emp = Employee("harry", 343, "Programmer")
+print(emp._Employee__pr)
+CWHV64—Polymorphism in python
+
+print(5+6)
+print("5" + "6")
+
+# Abstraction
+# Encapsulation
+# Inheritance
+# Polymorphism
+
+#Super and overriding in class
+
+class A:
+    classvar1 = "I am a class variable in class A"
+    def __init__(self):
+        self.var1 = "I am inside class A's constructor"
+        self.classvar1 = "Instance var in class A"
+        self.special = "Special"
+
+class B(A):
+    classvar1 = "I am in class B"
+
+    def __init__(self):
+        self.var1 = "I am inside class B's constructor"
+        self.classvar1 = "Instance var in class B"
+        # super().__init__()
+        # print(super().classvar1)
+
+
+a = A()
+b = B()
+
+print(b.special, b.var1, b.classvar1)
+
+66— dimond shape problem
+
+class A:
+    def met(self):
+        print("This is a method from class A")
+
+class B(A):
+    def met(self):
+        print("This is a method from class B")
+
+class C(A):
+    def met(self):
+        print("This is a method from class C")
+
+class D(C, B):
+    def met(self):
+        print("This is a method from class D")
+
+
+a = A()
+b = B()
+c = C()
+d = D()
+
+d.met()
+
+#Operator overloading
+
+class Employee:
+    no_of_leaves = 8
+
+    def __init__(self, aname, asalary, arole):
+        self.name = aname
+        self.salary = asalary
+        self.role = arole
+
+    def printdetails(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+    @classmethod
+    def change_leaves(cls, newleaves):
+        cls.no_of_leaves = newleaves
+
+    def __add__(self, other):
+        return self.salary + other.salary
+
+    def __truediv__(self, other):
+        return self.salary / other.salary
+
+    def __repr__(self):
+        return f"Employee('{self.name}', {self.salary}, '{self.role}')"
+
+    def __str__(self):
+        return f"The Name is {self.name}. Salary is {self.salary} and role is {self.role}"
+
+emp1 =Employee("Harry", 345, "Programmer")
+emp2 =Employee("Rohan", 55, "Cleaner")
+print(str(emp1))
+
+
+
+#68 Abstract base class and abstract method
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def printarea(self):
+        return 0
+
+class Rectangle(Shape):
+    type = "Rectangle"
+    sides = 4
+    def __init__(self):
+        self.length = 6
+        self.breadth = 7
+
+    def printarea(self):
+        return self.length * self.breadth
+
+rect1 = Rectangle()
+print(rect1.printarea())
+
+#69-Getter setter and property decorator
+class Employee:
+    def __init__(self, fname, lname):
+        self.fname = fname
+        self.lname = lname
+        # self.email = f"{fname}.{lname}@codewithharry.com"
+
+    def explain(self):
+        return f"This employee is {self.fname} {self.lname}"
+
+    @property
+    def email(self):
+        if self.fname==None or self.lname == None:
+            return "Email is not set. Please set it using setter"
+        return f"{self.fname}.{self.lname}@codewithharry.com"
+
+    @email.setter
+    def email(self, string):
+        print("Setting now...")
+        names = string.split("@")[0]
+        self.fname = names.split(".")[0]
+        self.lname = names.split(".")[1]
+
+    @email.deleter
+    def email(self):
+        self.fname = None
+        self.lname = None
+
+hindustani_supporter = Employee("Hindustani", "Supporter")
+# nikhil_raj_pandey = Employee("Nikhil", "Raj")
+
+print(hindustani_supporter.email)
+
+hindustani_supporter.fname = "US"
+
+print(hindustani_supporter.email)
+hindustani_supporter.email = "this.that@codewithharry.com"
+print(hindustani_supporter.fname)
+
+del hindustani_supporter.email
+print(hindustani_supporter.email)
+hindustani_supporter.email = "Harry.Perry@codewithharry.com"
+print(hindustani_supporter.email)
+
+#-72-Generator
+"""
+Iterable - __iter__() or __getitem__()
+Iterator - __next__()
+Iteration -
+"""
+def gen(n):
+    for i in range(n):
+        yield i
+
+g = gen(3)
+ print(g.__next__())
+ print(g.__next__())
+ print(g.__next__())
+ print(g.__next__())
+
+# for i in g:
+#     print(i)
+
+h = 546546
+ier = iter(h)
+print(ier.__next__())
+print(ier.__next__())
+print(ier.__next__())
+# for c in h:
+#     print(c)
+
+73-Comprihension
+
+# ls = []
+# for i in range(100):
+#     if i%3==0:
+#         ls.append(i)
+#-----OR----
+# ls = [i for i in range(100) if i%3==0]
+# print(ls)
+
+
+dict1 = {i:f"item {i}" for i in range(1, 10001) if i%100==0}
+dict1 = {i:f"Item {i}" for i in range(5)}
+
+dict2 = {value:key for key,value in dict1.items()}
+print(dict1,"\n", dict2)
+
+# dresses = [dress for dress in ["dress1", "dress2","dress1",
+#                                "dress2","dress1", "dress2"]]
+# print(type(dresses))
+
+evens = (i for i in range(100) if i%2==0)
+ print(evens.__next__())
+
+ for item in evens:
+     print(item)
+
+#74-using else with for loop
+khana = ["roti", "Sabzi", "chawal"]
+
+for item in khana:
+    if item == "rotiroll":
+        break
+else:
+    print("Your item was not found")
+
+#75- Function Caching In Python
+
+import time
+from functools import lru_cache
+
+@lru_cache(maxsize=32)
+def some_work(n):
+    #Some task taking n seconds
+    time.sleep(n)
+    return n
+
+if __name__ == '__main__':
+    print("Now running some work")
+    some_work(3)
+    some_work(1)
+    some_work(6)
+    some_work(2)
+    print("Done... Calling again")
+    input()
+    some_work(3)
+    print("Called again")
+
+#76- Else & Finally In Try Except 
+#f1 = open("harry.txt")#wrong approch
+
+try:
+    f = open("does2.txt")
+except EOFError as e:
+    print("Print eof error aa gaya hai", e)
+except IOError as e:
+    print("Print IO error aa gaya hai", e)
+else:
+    print("This will run only if except is not running")
+finally:
+    print("Run this anyway...")
+     f.close()
+ print("Important stuff")
+
+77---Coroutines In Python
+
+def searcher():
+    import time
+    # Some 4 seconds time consuming task
+    book = "This is a book on harry and code with harry and good"
+    time.sleep(4)
+    while True:
+        text = (yield)
+        if text in book:
+            print("Your text is in the book")
+        else:
+            print("Text is not in the book")
+
+search = searcher()
+print("search started")
+next(search)
+print("Next method run")
+search.send("harry")
+
+search.close()
+search.send("harry")
+# input("press any key")
+# search.send("harry and")
+# input("press any key")
+# search.send("thi si")
+# input("press any key")
+# search.send("joker")
+# input("press any key")
+# search.send("like this video")
+
+#79 Os Module
+
+import os
+ print(dir(os))
+ print(os.getcwd())
+ os.chdir("C://")
+ print(os.getcwd())
+ f = open("harry.txt")
+ print(os.listdir("C://"))
+ os.makedirs("This/that")
+ os.rename("harry.txt", "codewithharry.txt")
+ print(os.environ.get('Path'))
+ print(os.path.join("C:/", "/harry.txt"))
+
+print(os.path.exists("C://Program Files2"))
+print(os.path.isfile("C://Program Files"))
+
+
+#81-Req
+import requests
+r = requests.get("https://financialmodelingprep.com/api/company/price/AAPL")
+print(r.text)
+print(r.status_code)
+
+ url = "www.something.com"
+ data = {
+     "p1":4,
+     "p2":8
+ }
+ r2 = requests.post(url=url, data=data)
+
+82--- Json Module 
+
+import json
+data = '{"var1":"harry", "var2":56}'
+print(data)
+
+parsed = json.loads(data)
+print(type(parsed))
+
+#Task 1 - json.load?
+
+data2 = {
+    "channel_name": "CodeWithHarry",
+    "cars": ['bmw', 'audi a8', 'ferrari'],
+    "fridge": ('roti', 540),
+    "isbad": False
+}
+jscomp = json.dumps(data2)
+print(jscomp)
+
+# Task 2 = what is sort_keys parameter in dumps
+
+#84---- Pickle Module
+import pickle
+
+# Pickling a python object
+ cars = ["Audi", "BMW", "Maruti Suzuki", "Harryti Tuzuki"]
+ file = "mycar.pkl"
+ fileobj = open(file, 'wb')
+ pickle.dump(cars, fileobj)
+ fileobj.close()
+
+file = "mycar.pkl"
+fileobj = open(file, 'rb')
+mycar = pickle.load(fileobj)
+print(mycar)
+print(type(mycar))
+
+#86--- Regular Expressions
+Re.txt file as described in the video!
+Meta Characters
+[] A set of characters
+\ Signals a special sequence (can also be used to escape special characters)
+. Any character (except newline character)
+^ Starts with
+$ Ends with
+* Zero or more occurrences
++ One or more occurrences
+{} Exactly the specified number of occurrences
+| Either or
+() Capture and group
+Special Sequences
+\A Returns a match if the specified characters are at the beginning of the string
+\b Returns a match where the specified characters are at the beginning or at the end of a word r"ain\b"
+\B Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word
+
+\d Returns a match where the string contains digits (numbers from 0-9)
+\D Returns a match where the string DOES NOT contain digits
+\s Returns a match where the string contains a white space character
+\S Returns a match where the string DOES NOT contain a white space character
+\w Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character)
+\W Returns a match where the string DOES NOT contain any word characters
+\Z Returns a match if the specified characters are at the end of the string
+
+import re
+mystr = '''Tata Limited
+Dr. David Landsman, executive director
+18, Grosvenor Place
+London SW1X 7HSc
+Phone: +44 (20) 7235 8281
+Fax: +44 (20) 7235 8727
+Email: tata@tata.co.uk
+Website: www.europe.tata.com
+Directions: View map
+
+Tata Sons, North America
+1700 North Moore St, Suite 1520
+Arlington, VA 22209-1911
+USA
+Phone: +1 (703) 243 9787
+Fax: +1 (703) 243 9791
+66-66
+455-4545
+Email: northamerica@tata.com 
+Website: www.northamerica.tata.com
+Directions: View map fass
+harry bhai lekin
+bahut hi badia aadmi haiaiinaiiiiiiiiiiii'''
+
+ #findall, search, split, sub, finditer
+ patt = re.compile(r'fass')
+ patt = re.compile(r'.adm')
+ patt = re.compile(r'^Tata')#start with Tata
+ patt = re.compile(r'iin$')
+ patt = re.compile(r'ai{2}')
+ patt = re.compile(r'(ai){1}')
+ patt = re.compile(r'ai{1}|Fax')
+
+
+# Special Sequences
+# patt = re.compile(r'Fax\b')
+# patt = re.compile(r'27\b')
+patt = re.compile(r'\d{5}-\d{4}')
+
+#Task- Given a string with a lot of indian phone numbers starting from +91
+
+matches = patt.finditer(mystr)
+for match in matches:
+    print(match)
+
+
+import os
+def soldier(path, file, format):
+    os.chdir(path)
+    i = 1
+    files = os.listdir(path)
+    with open(file) as f:
+        filelist = f.read().split("\n")
+
+    for file in files:
+        if file not in filelist:
+            os.rename(file, file.capitalize())
+
+        if os.path.splitext(file)[1] == format:
+            os.rename(file, f"{i}{format}")
+            i +=1
+
+soldier(r"C:\Users\Haris\Desktop\testing",
+        r"C:\Users\Haris\PycharmProjects\PythonTuts\ext.txt", ".png" )
+
+#89--- Raise In Python + Examples
+
+ a = input("What is your name")
+ b = input("How much do you earn")
+ if int(b)==0:
+     raise ZeroDivisionError("b is 0 so stopping the program")
+ if a.isnumeric():
+     raise Exception("Numbers are not allowed")
+print(f"Hello {a}")
+
+
+# Task - Write about 2 built in exception
+c = input("Enter your name")
+try:
+    print(a)
+except Exception as e:
+    if c =="harry":
+        raise ValueError("Harry is blocked he is not allowed")
+    print("Exception handled")
+
+#90----- Python 'is' vs '==': What's The Difference?
+# ==  value equality - Two objects have the same value
+# is  reference equality - Two references refer to the same object
+a =[6, 4 , "34"]
+b = [6, 4 , "34"]
+print(b is a)
+
+#93--- Creating a Command Line Utility In Python
+import argparse
+import sys
+
+def calc(args):
+    if args.o == 'add':
+        return args.x + args.y
+
+    elif args.o == 'mul':
+        return args.x * args.y
+
+    elif args.o == 'sub':
+        return args.x - args.y
+
+    elif args.o == 'div':
+        return args.x / args.y
+
+    else:
+        return "Something went wrong"
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--x', type=float, default=1.0,
+                        help="Enter first number. ")
+
+    parser.add_argument('--y', type=float, default=3.0,
+                        help="Enter second number. ")
+
+    parser.add_argument('--o', type=str, default="add",
+                        help="This is a utility for calculation ")
+
+    args = parser.parse_args()
+    sys.stdout.write(str(calc(args)))
+
+#95--- Creating a Python Package Using Setuptools
+
+from setuptools import setup
+setup(name="mypackage",version="0.3",description="This is code with harry package",long_description = "This is a very very long description", author="Harry",packages=['mypackage'],install_requires=[])
+#Code __init__.py as described/written in the video
+#Copy
+class Achha:
+    def __init__(self):
+        print("Constructor ban gaya")
+
+    def achhafunc(self, number):
+        print("This is a function")
+        return number
+
+#96----- Python Exercise 11: Regex Email Extractor
+str = """
+
+ Email:enquiry@alliance.edu.in   Helpline: +91 80 3093 8100 / 8200 / 4619 9100
+ Media  Library  News  Webmail  Careers
+ Alliance University
+ Conferences
+ Admissions Open
+ Select Language
+UPDATES:
+ABOUT US 
+WHY AU 
+COLLEGES 
+FACULTY
+INTERNATIONAL PROGRAMS
+PROGRAMS
+RESEARCH
+ADMISSIONS 
+PLACEMENTS
+CONTACT US
+Contact UsHome Contact Us
+ Contact Us Back
+ Vice-Chancellor
+Dr. Pavana Dibbur
+ : vc@alliance.edu.in
+ : +91 80 3093 8100/4619 9100
+
+ Pro Vice-Chancellor (Academics, Research & Strategy)
+Dr. Anubha Singh
+ : anubha@alliance.edu.in
+ : +91 80 3093 8102
+
+ Registrar
+Mr. Madhu Sudan Mishra
+ : registrar@alliance.edu.in
+ : +91 80 3093 8100/4619 9100
+
+ Registrar (Examination & Evaluation)
+Dr. Sajan Mathew
+ : registrar.exams@alliance.edu.in
+ : +91 80 3093 8141
+
+ Director (Placements)
+Mr. Mathew Thankachan
+ : placement@alliance.edu.in | mathew.t@alliance.edu.in
+ : +91 80 3093 8124 | 98444 72674
+
+ Director (International Affairs)
+Mr. Rajen Chatterjee
+ : rajen.chatterjee@alliance.edu.in
+ : +91 80 3093 8075
+
+ Director (Admissions)
+Mr. Abhay Chebbi
+ : abhay.chebbi@alliance.edu.in
+ : +91 96636 46464
+
+ Human Resources Department
+ : hrd@alliance.edu.in
+ : +91 80 3093 8210 / 8204
+
+ Student Verification 
+Office of Registrar (Examination & Evaluation)
+ : edu.verify@alliance.edu.in
+ : +91 80 3093 8100 / 8200 | +91 80 4619 9100
+
+ Contacts Info
+ ALLIANCE UNIVERSITY
+ Central Campus
+Chikkahagade Cross, Chandapura - Anekal Main Road, Anekal
+Bengaluru – 562 106, Karnataka,   India. [ Get Route Map ]
++91 80 3093 8100/8200/4619 9100 | Fax: +91 80 4619 9099
+E-mail : enquiry@alliance.edu.in
+
+ Office of Admissions
+UG: +91 9620009825 | 91084 43123 | 91084 42143 | 98806 19618
+PG: +91 98860 02500 | 99002 29974 | 90083 16363
+
+ City Campus 1
+19th Cross, 7th Main, BTM 2nd Stage, N.S. Palya
+Bengaluru – 560 076, Karnataka,   India. [ Get Route Map ]
+Tel.: +91 80 26786020 / 21 , 26789749
+
+ City Campus 2
+2nd Cross, 36th Main, Dollars Scheme, BTM 1st Stage
+Bengaluru – 560 068, Karnataka,   India. [ Get Route Map ]
+Tel.: +91 80 26681444 / 4372 | Fax: +91 80 26782048
+
+ CONTACT INFO
+ Contact Us
+ Enquiry
+ Feedback
+ Get Route from Address
+Quick Course Finder
+
+
+Find Courses
+ SCHOOLS | COLLEGES
+ Alliance School of Business
+ Alliance College of Engineering and Design
+ Alliance School of Law
+ Alliance Ascent College
+ Planned Academic Units
+International Partners
+
+Antwerp Management School
+Antwerp Management School
+Belgium
+Royal Roads University
+Royal Roads University
+Canada
+Beijing Institute of Technology
+Beijing Institute of Technology
+China
+Nanjing University of Aeronautics and Astronautics
+Nanjing University of Aeronautics and Astronautics
+China
+The Sino-British College, USST,
+The Sino-British College, USST,
+China
+INSEEC
+INSEEC
+France
+IPAC School of Management
+IPAC School of Management
+France
+ISEP
+ISEP
+France
+Paris School of Business
+Paris School of Business
+France
+Telecom School of Management
+Telecom School of Management
+France
+The Netherlands
+Maastricht School of Management
+Maastricht School of Management
+The Netherlands
+Russian Presidential Academy of National Economy and Public Admi. (RANEPA)
+Russian Presidential Academy of National Economy and Public Admi. (RANEPA)
+Russia
+Togliatti Academy of Management
+Togliatti Academy of Management
+Russia
+Edinburgh Napier University
+Edinburgh Napier University
+UK
+Federation of Schools (FEDE)
+Federation of Schools (FEDE)
+Switzerland
+USA
+Georgia State University
+Georgia State University
+USA
+Kennesaw State University
+Kennesaw State University
+US
+Oakland University
+Oakland University
+USA
+San Jose State University
+San Jose State University
+USA
+The University of Memphis
+The University of Memphis
+USA
+Webber International University
+Webber International University
+USA
+ International Programs
+ Testimonials
+ My two years at Alliance University have groomed me to be a confident individual ready to enter the corporate world and has deepened this confidence by helping me get a job in my dream organization. Alliance with its state of the art facilities, competitive curriculum, varied cultural mix and strong faculty base has motivated and guided m...  Read More
+
+ Kiran Varghese Jacob Kiran Varghese Jacob
+Google Google
+ Top University in India for MBA LAW Engineering & Arts and the Humanities
+Alliance University is a private University established in Karnataka State by Act No.34 of year 2010 and is recognized by the University Grants Commission (UGC), New Delhi... 
+
+About Us
+THE UNIVERSITY
+GOVERNANCE
+CORPORATE SOCIAL RESPONSIBILITY
+AACSB
+IACBE
+NIRF
+"""
+#email = re.findall(r"[0-9a-zA-Z._+%]+@[0-9a-zA-Z._+%]+[.][a-zA-Z.0-9]+", str)
+email = re.findall(r"[a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+\.[a-zA-Z]+",str)
+print(email)
+
+CWHV—104--- Python Practice 1 Solution
+yearAge = int(input("What is your Age/Year of birth\n"))
+isAge = False
+isYear = False
+if len(str(yearAge)) == 4:
+    isYear = True
+else:
+    isAge = True
+if(yearAge<1900 and isYear):
+    print("You seem to be the oldest person alive")
+    exit()
+if(yearAge>2019):
+    print("You are not yet born")
+    exit()
+if isAge:
+    yearAge = 2019 - yearAge  
+
+print(f"You will be 100 years old in {yearAge + 100}")
+
+interestedYear = int(input("Enter the year you want to know your age in\n"))
+print(f"You will be {interestedYear - yearAge} years old in {interestedYear}")
+#105--- Problem Statement:
+Harry potter has got n number of apples. Harry has some students among whom, he wants to distribute the apples. These n number of apples are provided to harry by his friends and he can request for few more or few less apples.
+You need to print whether a number in range mn to mx is a divisor of n or not.
+Input:
+Take input n, mn and mx from the user
+Output:
+Print whether the numbers between mn and mx are divisor of n or not. If mn = mx, show that this is not a range and mn is equal to mx. Show the result for that number
+Example:
+If n is 20 and mn=2 and mx = 5
+2 is a divisor of 20
+3 is not a divisor of 20
+…
+5 is a divisor of 20
+CWHV—106---- Python Practice 2 Solution
+apples = int(input("Enter the number of apples\n"))
+mn = int(input("Enter the minimum number to check\n"))
+mx = int(input("Enter the maximum number to check\n"))
+for i in range(mn, mx+1):
+    if apples%i == 0:
+        print(f"{i} is a divisor of {apples}")
+    else:
+        print(f"{i} is not a divisor of {apples}")

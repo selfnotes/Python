@@ -1,0 +1,636 @@
+#Python with numpy, pandas and matplotlib 
+s='this is sparta'
+print(s.find('a'))
+print(s.split(' '))
+#Data structure in python
+# 1-tuple -immutable-ordered-hetroginious
+tup1=(1,True,"a",9.05)
+print(tup1)
+#indexing in tuple
+print(tup1[2])
+print(tup1[0:2])
+print(len(tup1))
+tup2=(1,2,3)
+tup3=(4,5,6)
+print(tup2+tup3)
+#repete operation
+print(tup2*3)
+#min and max
+print(max(tup2))
+#list data structure--mutable- []- hetrogenous elements
+l1=[1,'sparta',3.14,True]
+print(type(l1))
+print(l1[1])
+print(l1[1:3])#range will return the list of elements
+print(l1[-1])
+l1[0]=99
+print(l1)
+#l1.append("gaurav")#to add new element in list
+print(l1)
+#print(l1.pop(2))# to remove
+#l2=l1.reverse()
+print(l1.reverse())
+l2=[1,5,3,4,5]
+l2.sort()
+print(l2)
+print(l1+l2*3)
+#Dictionary - key value pair-mutable-{}
+d1={'apple':100,'mango':200,'gavawa':40,'banana':500}
+print(d1)
+print(d1.keys())
+print(d1.values())
+d1['orange']=50 #to add new item in dictoinary
+print(d1)
+d1['apple']=1000  #modify the value of a key
+print(d1)
+d2={'spn':242001,'delhi':110092,'kanpur':242990}
+#append in d1
+d1.update(d2)
+print(d1)
+d1.pop('spn') #to remove the keyvalue pair
+print(d1)
+#set--unordered and unindex--no duplicate
+s1={1,3,14,'sparta',1,14,'sparta'}
+print(type(s1))
+print(s1)
+s1.add(True)
+print(s1)
+s1.update([7,8,200,'kamal',2+7j])#for multiple insertion
+print(s1)
+s1.remove(7)
+s1.remove('kamal')
+print(s1)
+s1={1,2,3,'a'}
+s2={'a','b','c'}
+print(s1.union(s2))
+print(s1.intersection(s2))
+
+#if-else
+a=30
+b=30
+if b>a:
+    print("b is greter than a")
+elif(a>b):
+    print("a is greter then b")
+else:
+    print("both are equals")
+#if with tuple
+tup1=(3,5,7,9,20)
+if 5 in tup1:
+    print("value is present ")
+#if with list
+l1=['a','b','c']
+if 'a' in l1:
+    l1[0]='n'
+    print(l1)
+#while loop
+i=1
+while i<=10:
+    print(i)
+    i=i+1
+#while loop with list
+l1=[1,2,3,4,5]
+i=0
+while i<len(l1):
+    l1[i]=l1[i]+100
+    print(l1[i])
+    i=i+1
+#for loop- running only on sequernce i.e. list,tuple,dictoinary not in set
+l1=['mango','apple','greaps','orange']
+for i in l1:
+    print(i)
+
+l1=['mango','apple','greaps','orange']
+l2=['white','black']
+for i in l2:
+    for j in l1:
+        print(i,j)
+
+#functions
+def hello():
+    print('Hello world')
+hello()
+def addten(x):
+    return x+10
+print(addten(10))
+
+def odd_even(x):
+    if x%2==0:
+        print(f"{x} is even")
+    else:
+        print(x,"is odd")
+odd_even(10)
+
+
+#lambda function # it uses with the other functions like filter, map, reduce
+a=lambda x,y:x+y
+print(a(4,4))
+#lambda with filter
+l1=[34,56,22,45,55,66,77,88,99,100]
+final_list=list(filter(lambda x:x%2!=0,l1))
+print(final_list)
+#lambda function
+l1=[1,2,3,4,5,6,7,8,9]
+final_list1=list((map(lambda x:x*2,l1)))
+print(final_list1)
+
+
+#lambda Using Reduce -this will give the consolidated result it is not return list object so need not to type cast
+from functools import reduce
+l1=[1,2,3,5,4,7,6,9]
+final=reduce(lambda x,y:x+y,l1)
+print(final)
+#object oriented programming
+#Class is a user defined data type in python
+#objects are specific instance of the class
+
+class phone:
+    def make_call(self):
+        print("making phone call")
+    def play_game(self):
+        print("playing game")
+
+p1=phone()
+p1.make_call()
+p1.play_game()
+#2.
+class Phone:
+    def set_color(self,color):
+        self.color=color
+
+    def set_cost(self, cost):
+           self.cost = cost
+
+    def show_color(self):
+        return self.color
+
+    def show_cost(self):
+           return self.cost
+    def make_call(self):
+        print("making phone call")
+
+    def play_game(self):
+        print("playing game")
+
+p2=Phone()
+p2.set_color("blue")
+p2.set_cost(5000)
+print(p2.show_color())
+print(p2.show_cost())
+p2.make_call()
+p2.play_game()
+
+
+#constructor in python
+class Employee:
+    def __init__(self,name,age,salary,gender):
+        self.n=name
+        self.a=age
+        self.s=salary
+        self.g=gender
+    def employee_details(self):
+        print("name of the employee is ",self.n)
+        print("age of the employee is ", self.a)
+        print("salary of the employee is ", self.s)
+        print("gender of the employee is ", self.g)
+
+e1=Employee('sam',32,8500,'M')
+e1.employee_details()
+
+#inheritance
+class Vehicle:
+    def __init__(self,mileage,cost):
+        self.mileage=mileage
+        self.cost=cost
+
+    def show_details(self):
+        print("I am a vehicle")
+        print("Mileage of vehicle is ", self.mileage)
+        print("cost of the vehcle is ", self.cost)
+v1=Vehicle(5000,70000)
+v1.show_details()
+#child class
+class Car(Vehicle):
+    def show_car(self):
+        print("I am a car")
+
+c1=Car(200,30000)
+c2=Car(1,2)
+c1.show_details()
+c1.show_car()
+c2.show_car()
+
+#constructor in python
+class Employee:
+    def __init__(self,name,age,salary,gender):
+        self.n=name
+        self.a=age
+        self.s=salary
+        self.g=gender
+    def employee_details(self):
+        print("name of the employee is ",self.n)
+        print("age of the employee is ", self.a)
+        print("salary of the employee is ", self.s)
+        print("gender of the employee is ", self.g)
+
+e1=Employee('sam',32,8500,'M')
+e1.employee_details()
+
+#inheritance
+class Vehicle:
+    def __init__(self,mileage,cost):
+        self.mileage=mileage
+        self.cost=cost
+
+    def show_details(self):
+        print("I am a vehicle")
+        print("Mileage of vehicle is ", self.mileage)
+        print("cost of the vehcle is ", self.cost)
+v1=Vehicle(5000,70000)
+v1.show_details()
+#child class
+class Car(Vehicle):
+    def __init__(self,mileage,cost,tyres,hp):
+        super().__init__(mileage,cost)
+        self.tyres=tyres
+        self.hp=hp
+
+    def show_car_detail(self):
+        print("no of tyres in car",self.tyres)
+        print("hourse power of car is ",self.hp)
+        print("i am car")
+
+
+c1=Car(20,30000,4,400)
+#c2=Car(1,2)
+c1.show_details()
+c1.show_car_detail()
+#c2.show_car()
+
+#multiple inheritance
+class Parent1():
+    def assign_string_one(self,str1):
+        self.str1=str1
+    def show_string_one(self):
+        return self.str1
+class Parent2():
+    def assign_string_two(self,str2):
+        self.str2=str2
+    def show_string_two(self):
+        return self.str2
+    
+class Derived(Parent1,Parent2):
+    def assign_string_three(self,str3):
+        self.str3 = str3
+
+    def show_string_three(self):
+        return self.str3
+d1=Derived()
+d1.assign_string_one("one")
+d1.assign_string_two("two")
+d1.assign_string_three("three")
+
+d1.show_string_one()
+d1.show_string_two()
+d1.show_string_three()
+
+#Multilevel inheritance
+class Parent():
+    def assign_name(self,name):
+        self.name=name
+    def show_name(self):
+        return self.name
+class Child(Parent):
+    def assign_age(self,age):
+        self.age=age
+
+    def show_age(self):
+        return self.age
+class Grandchild(Child):
+    def assign_gender(self,gender):
+        self.gender=gender
+    def show_gender(self):
+        return self.gender
+gc=Grandchild()
+gc.assign_name("AVINASH")
+gc.assign_age(21)
+gc.assign_gender("M")
+print(gc.show_age())
+print(gc.show_gender())
+print(gc.show_name())
+#with the help of Pandas we can do data manipulation 
+#NumPy used for the numeric calculations
+#matplotlib for the data vizualization
+
+import numpy as np
+n1=np.array([10,20,30,40])
+n2=np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(n1)
+print(n2)
+print(type(n1))
+
+#Q-How we can create nd array in NP using zeros method
+import numpy as np
+n1=np.zeros((1,2))
+print("Array= ", n1)
+n2=np.zeros((5,5))
+print(n2)
+# if we want to ND array with specific value use full
+n3=np.full((2,3),10)
+print(n3)
+#array with start and end range it exclude end number
+n1=np.arange(10,20)
+print(n1)
+#array with start and end range it exclude end number with specific no of gaps
+n1=np.arange(10,50,5)
+print(n1)
+#array with random numbers
+n1=np.random.randint(1,100,10)#(start,end,number of elements)
+print(n1)
+#find and change the shape of the array dimension
+n1=np.array([[1,2,3],[4,5,6]])
+print(n1.shape)
+n1.shape=(3,2)
+print(n1.shape)
+
+#Addition of the arrays
+#1-vstack-vertical
+import numpy as np
+n1=np.array([10,20,30])
+n2=np.array([40,50,60])
+n3=np.vstack((n1,n2))
+print(n3)
+#2-hstack-horizontal
+n3=np.hstack((n1,n2))
+print(n3)
+#3-column_stack()
+np.column_stack((n1,n2))
+n3=np.column_stack((n1,n2))
+print(n3)
+#some operations on array intersect1d,setdiff1d
+n1=np.array([10,20,30,40,50,60])
+n2=np.array([50,60,70,80,90])
+print(np.intersect1d(n1,n2))
+print(np.setdiff1d(n1,n2))
+print(np.setdiff1d(n2,n1))
+
+import numpy as np
+n1=np.array([10,20])
+n2=np.array([30,40])
+print(np.sum([n1,n2]))#add all elements
+print(np.sum([n1,n2],axis=0))
+print(np.sum([n1,n2],axis=1))
+n1=n1+1 # to add 1 into all element
+print(n1)
+n1=n1*2 # to multiply 1 into all element
+print(n1)
+n1=n1-2 # to subs 1 into all element
+print(n1)
+n1=n1/2 # to devide 1 into all element
+print(n1)
+print("this is mean ",np.mean(n1))
+print("this is median ",np.median(n1))
+print("this is std ",np.std(n1))
+
+
+import numpy as np
+n1=np.array([10,20,30,40,50,60])
+np.save('myarray',n1)
+newn1=np.load('myarray.npy')
+print(newn1)
+
+#pandas gives the single and multidimensional array and method by which
+#we can manupulates data.
+#single-dimensional-series object
+#multi-dimensional -data fram
+
+
+
+import pandas as pd
+s1=pd.Series([10,20,30,40,50])
+print(s1)
+print(type(s1))
+#we can change the index value
+s2=pd.Series([11,22,33,44,55],index=['a','b','c','d','e'])
+print(s2)
+#create series obj with the help of dictionary
+s3=pd.Series({'a':10,'b':20,'c':30})
+print(s3)
+#to add new index
+s4=pd.Series({'a':10,'b':20,'c':30},index=['b','c','d','a'])
+print(s4)
+#extract the data
+s1=pd.Series([10,20,30,40,50,60,70])
+print(s1[3])#index start from zero
+print(s1[-3:])
+print(s1[4:])
+#airthmatic operations on series
+s2=pd.Series([1,2,3,4,5,6])
+print(s1+5)
+print(s1+s2)
+
+#data fram
+import pandas as pd
+#f1=pd.DataFrame({"name":['Bob','Sam','Anne'],"Marks":[76,25,92]})
+#print(f1)
+#build in functions in pd
+#head-first 5 records
+#tail-last 5 records you can see
+#shape()-to no of rows and no of columns
+#describe()-structure of the dataset
+
+iris=pd.read_csv('gaur.csv')
+print(iris.head())
+#print(iris.tail())
+#print(iris.shape)
+#print(iris.describe())
+#to extract data from the data set using iloc
+#iris1=iris.iloc[0:3,0:3]
+#print(iris1)
+#print(iris1.head)
+print(iris.iloc[2:5,2:4])#for mentioning the name of the column
+print(iris.loc[3:10,("SepalWidthCm","PetalLengthCm")])
+iris1=iris.loc[3:10,("SepalWidthCm","PetalLengthCm")]
+#to drop the column
+
+i2=iris1.drop('SepalWidthCm',axis=1)
+print(i2)#axis=0 for rows deletion and axis=1 for column
+i3=i2.drop([3,4],axis=0)
+print(i3)
+print("Mean of the data",i3.mean())
+print("Min of the data",i3.min())
+print("Median of the data",i3.median())
+print("Max of the data",i3.max())
+print(i3)
+#apply some methods on the data set in perticular column
+def half(arguments):
+    arguments*.5
+iris[['SepalWidthCm','PetalLengthCm']].apply(half)
+print(iris)
+print(iris['Species'].value_counts())
+print(iris.sort_values(by='SepalLengthCm'))#can't apply the letrials(special character)
+
+
+import numpy as np
+from matplotlib import pyplot as plt
+x=np.arange(1,11)
+print(x)
+y=2*x
+print(y)
+plt.plot(x,y,color='g',linestyle=':',linewidth=4)
+plt.title("Line Plot")
+plt.xlabel("this is x axis")
+plt.ylabel("this is Y axis")
+
+plt.show()
+
+
+
+#############################
+import numpy as np
+from matplotlib import pyplot as plt
+x=np.arange(1,11)
+y1=x*2
+y2=x*3
+plt.plot(x,y1,color='g',linestyle=':',linewidth=2)
+plt.plot(x,y2,color='r',linestyle=':',linewidth=3)
+plt.title("Line Plot")
+plt.xlabel("this is lable X")
+plt.ylabel("this is lable Y")
+plt.grid(False)
+plt.show()
+
+#########################
+import numpy as np
+from matplotlib import pyplot as plt
+x=np.arange(1,11)
+y1=x*2
+y2=x*3
+plt.subplot(1,2,1)#(1 row, 2 column, showing index no )
+plt.plot(x,y1,color='g',linestyle=':',linewidth=2)
+plt.subplot(1,2,2)
+plt.plot(x,y2,color='r',linestyle=':',linewidth=2)
+plt.show()
+
+
+#############################
+import numpy as np
+from matplotlib import pyplot as plt
+x=np.arange(1,11)
+y1=x*2
+y2=x*3
+plt.subplot(1,2,1)#(1 row, 2 column, showing index no )
+plt.plot(x,y1,color='g',linestyle=':',linewidth=2)
+plt.subplot(1,2,2)
+plt.plot(x,y2,color='r',linestyle=':',linewidth=2)
+plt.show()
+#######################
+#bar chart
+import numpy as np
+from matplotlib import pyplot as plt
+student={"Bob":87,"Matt":56,"Sam":27}
+names=list(student.keys())
+values=list(student.values())
+plt.bar(names,values)
+plt.show()
+###############same as above
+#bar chart
+import numpy as np
+from matplotlib import pyplot as plt
+student={"Bob":87,"Matt":56,"Sam":27}
+names=list(student.keys())
+values=list(student.values())
+plt.bar(names,values)
+plt.title("Bar Plot")
+plt.xlabel("This is x lable--Names")
+plt.ylabel("This is y lable--Value")
+plt.grid(True)
+plt.show()
+#######################Horizontal
+#bar chart
+import numpy as np
+from matplotlib import pyplot as plt
+student={"Bob":87,"Matt":56,"Sam":27}
+names=list(student.keys())
+values=list(student.values())
+plt.barh(names,values)
+plt.title("Bar Plot")
+plt.xlabel("This is x lable--Names")
+plt.ylabel("This is y lable--Value")
+plt.grid(True)
+plt.show()
+
+#Scatter plot no of values should be same in both axises 
+import numpy as np
+from matplotlib import pyplot as plt
+
+x=[10,20,30,40,50,60,70,80,90]
+y=[8,1,7,2,0,3,7,3,2]
+plt.scatter(x,y)
+plt.show()
+
+#Scatter plot marker change
+import numpy as np
+from matplotlib import pyplot as plt
+
+x=[10,20,30,40,50,60,70,80,90]
+y=[8,1,7,2,0,3,7,3,2]
+plt.scatter(x,y,marker='*',edgecolors='r',s=200)
+plt.show()
+
+
+#Scatter plot no of values should be same in both axises
+import numpy as np
+from matplotlib import pyplot as plt
+
+x=[10,20,30,40,50,60,70,80,90]
+a=[8,1,7,2,0,3,7,3,2]
+b=[6,9,1,4,5,7,9,3,5]
+#plt.subplot(1,2,1)
+plt.scatter(x,a,marker='*',c='r',s=100)
+#plt.subplot(1,2,2)
+plt.scatter(x,b,c='g',s=200)
+plt.show()
+
+
+#Histogram
+import numpy as np
+from matplotlib import pyplot as plt
+data=[1,2,6,8,9,7,2,4,6,8,0,2,3]
+plt.hist(data)
+plt.show()
+plt.hist(data,color="g",bins=4)
+plt.show()
+
+
+#box plot and violineplot
+import numpy as np
+from matplotlib import pyplot as plt
+a=[1,2,6,8,9,7,2,4,6,8,0,2,3]
+b=[4,5,4,9,0,1,2,3,6,7,0,]*2
+c=b*2
+data=list([a,b,c])
+#plt.boxplot(data)
+#plt.show()
+plt.violinplot(data,showmedians=True)
+plt.show()
+
+#pai chart
+import numpy as np
+from matplotlib import pyplot as plt
+fruit=['Apple','banana','Orange','mango']
+quantity=[11,33,66,22]
+#plt.pie(quantity,labels=fruit) #or
+plt.pie(quantity,labels=fruit,autopct='%0.1f%%',colors=['yellow','red','white','green'])
+
+plt.show()
+
+#DoughNut chart
+import numpy as np
+from matplotlib import pyplot as plt
+fruit=['Apple','banana','Orange','mango']
+quantity=[11,33,66,22]
+plt.pie(quantity,labels=fruit,radius=1.5)
+plt.pie([1],colors=['w'],radius=1)
+
+plt.show()
