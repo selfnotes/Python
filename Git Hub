@@ -8,7 +8,7 @@ learning@learning:~$ sudo apt-get install git
 learning@learning:~$ git config --global user.name "Your Userid"
 learning@learning:~$ git config --global user.email "Your Email"
 
-4- Now go to your GitHub account and create repository for public, I have created with the name "myworkspace"
+4- Now go to your GitHub account and create repository for public, I have created with the name "workingspace"
 
 5-create and directory on your local machine for git with same same as GitHub directory 
 learning@learning:~$ mkdir myworkspace
